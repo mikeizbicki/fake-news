@@ -291,7 +291,7 @@ def text2sentences(text):
     return sentences 
 
 for labeler in args.labelers:
-    filename=args.claim+'.'+labeler+'.xslx'
+    filename=args.claim+'.'+labeler+'.xlsx'
     claim_sheet=MySheet(filename,claim_attrs,title)
     random.Random(args.seed+hash(labeler)).shuffle(articles)
     for article in articles:
