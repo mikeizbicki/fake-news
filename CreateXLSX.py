@@ -311,8 +311,8 @@ for labeler in args.labelers:
         claim_sheet.update_column('Sentence','<<<< rate the article overall >>>>')
         #claim_sheet.update_column('Type','---- not applicable ----',locked_overwrite=True)
         #claim_sheet.update_column('Citation','---- not applicable ----',locked_overwrite=True)
-        for title in ['Events','Regulations','Quantity','Prediction','Personal','Normative','Other','No Claim', 'Citation']:
-            claim_sheet.update_column(title,'N/A',locked_overwrite=True)
+        for header in ['Events','Regulations','Quantity','Prediction','Personal','Normative','Other','No Claim', 'Citation']:
+            claim_sheet.update_column(header,'N/A',locked_overwrite=True)
         claim_sheet.merge_document_columns('DocID',article.url)
         claim_sheet.merge_document_columns('DocType','url')
         #claim_sheet.merge_document_columns('Doc Stance','')
